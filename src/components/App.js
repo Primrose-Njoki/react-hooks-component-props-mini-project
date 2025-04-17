@@ -1,8 +1,9 @@
 import React from "react";
 import blogData from "../data/blog"; //imports the blog data
-import Header from "./components/Header";
-import ArticleList from "./components/ArticleList";
-import About  from "./components/About"
+import Header from "./Header";
+import ArticleList from "./ArticleList";
+import About  from "./About"
+import logo from "../assets/logo.png"; 
 
 console.log(blogData); 
 
