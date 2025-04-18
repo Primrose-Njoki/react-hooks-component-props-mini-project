@@ -1,3 +1,4 @@
+jest.mock('../assets/logo.png', () => 'test-stub');
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import App from "../components/App";

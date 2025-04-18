@@ -1,4 +1,5 @@
 import React from 'react'
+import Article from './Article';
 
 function  ArticleList ({posts})  {
   return (
@@ -9,7 +10,7 @@ function  ArticleList ({posts})  {
         title={post.title}
         date={post.date}
         preview={post.preview}
-        minutesToRead={post.minutesToRead}/>
+        minutesToRead={post.minutes}/>
     ))}
 
 </main>

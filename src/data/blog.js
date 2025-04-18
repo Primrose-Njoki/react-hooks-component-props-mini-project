@@ -1,4 +1,4 @@
-import logo from "../components/assets/logo";
+import logo from "../assets/logo";
 
 const blogData = {
   name: "Underreacted",
@@ -23,6 +23,7 @@ const blogData = {
       id: 3,
       title: "Function vs Class Components",
       preview: "React, meet OOJS.",
+      date:"December 25, 2020",
       minutes: 47,
     },
   ],
