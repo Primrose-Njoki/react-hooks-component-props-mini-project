@@ -3,8 +3,9 @@ import blogData from "../data/blog"; //imports the blog data
 import Header from "./Header";
 import ArticleList from "./ArticleList";
 import About  from "./About";
-//import logo from '../logo';
+import logo from '../assets/logo.png'
 import Article from "./Article";
+
 
 console.log(blogData); 
 
@@ -15,7 +16,8 @@ function App() {
       <Header name = {blogData.name} />
       <About  image = {blogData.image} about ={blogData.about}/>
       <ArticleList posts={blogData.posts}/>
-      <Article />
+      <Article /> 
+      <img src={logo} alt="Blog logo" />
     </div>
   );
 }

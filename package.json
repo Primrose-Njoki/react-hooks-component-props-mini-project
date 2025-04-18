@@ -4,7 +4,11 @@
   "private": true,
   "jest": {
     "transform": {
-      "^.+\\.js$": "babel-jest"    }
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(png|jpg|jpeg|gif|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    }
   },
   "dependencies": {
     "react": "^17.0.1",
@@ -40,9 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-   
-      }
-    }
-
-  
-
+  }
+}
