@@ -22,4 +22,5 @@ function Article({ title, date = "January 1, 1970", preview, minutesToRead }) {
   );
 }
 
+
 export default Article;
