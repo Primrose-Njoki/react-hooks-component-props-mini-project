@@ -20,6 +20,7 @@ function App() {
       <img src={logo} alt="Blog logo" />
     </div>
   );
+  
 }
 
 export default App;
