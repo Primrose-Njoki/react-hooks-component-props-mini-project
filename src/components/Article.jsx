@@ -18,6 +18,7 @@ function Article({ title, date = "January 1, 1970", preview, minutesToRead }) {
         {date} • {minutesToRead && getMinutesEmoji(minutesToRead)}
       </small>
       <p>{preview}</p>
+      
     </article>
   );
 }
