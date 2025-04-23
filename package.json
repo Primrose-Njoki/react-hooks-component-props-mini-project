@@ -4,11 +4,17 @@
   "private": true,
   "jest": {
     "transform": {
-      "^.+\\.js$": "babel-jest"
+      "^.+\\.(js|jsx)$": "babel-jest"
     },
+    "moduleFileExtensions": ["js", "jsx"],
     "moduleNameMapper": {
-      "\\.(png|jpg|jpeg|gif|svg)$": "<rootDir>/__mocks__/fileMock.js"
-    }
+      "\\.(png|jpg|jpeg|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!your-lib-to-transform|another-lib)"
+    ],
+    "testEnvironment": "jsdom"
   },
   "dependencies": {
     "react": "^17.0.1",
@@ -20,12 +26,16 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "mocha": "^8.2.1"
+    "babel-jest": "^27.5.1",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "identity-obj-proxy": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "echo \".results.json\" && react-scripts test --reporters=@learn-co-curriculum/jest-learn-reporter --reporters=default --watchAll",
+    "test": "react-scripts test --watchAll=false --verbose",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
